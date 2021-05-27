@@ -1,0 +1,10 @@
+.UseState{
+    border: black solid 1px;
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+    align-items: center;
+}
+input{
+    text-align: center;
+}

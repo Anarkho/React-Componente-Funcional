@@ -1,11 +1,11 @@
-
+import React from 'react'
+import ReducerHook from './Reducer' //index
+import './estilo.css'
 
 function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+   return(
+       <ReducerHook/>
+   )
 }
 
 export default App;

@@ -1,0 +1,36 @@
+import React, { useState, useEffect } from 'react'
+
+function UseEffect() {
+    const [numero, setNumero] = useState('')
+    const [segundoNumero, setSegundoNumero] = useState('')
+    const [resultado, setResultado] = useState('')
+
+    const somar = () => {
+        const numeroInt = parseInt(numero)
+        const segNumeroInt = parseInt(segundoNumero)
+        setResultado(numeroInt + segNumeroInt)
+
+    }
+
+    useEffect(() => {
+        console.log('Resultado: ', resultado)
+    },[resultado]) // array vazio execulta uma unica vez como didMount, com o nome das variavel toda vez que elas sofre alteração e sem array execulta toda a vez que houver qualquer alteração
+
+    return (
+        < div className="UseState" >
+            Numero 1: <br />
+            <input type='text' value={numero} onChange={(e) => setNumero(e.target.value)}></input><br />
+       Numero 2: <br />
+            <input type='text' value={segundoNumero} onChange={(e) => setSegundoNumero(e.target.value)}></input><br />
+
+            <button
+                onClick={somar}>
+                Somar
+      </button> <br />
+       Resultado: <br />
+            <input type='text' defaultValue={resultado}></input><br />
+        </div >
+    );
+}
+
+export default UseEffect;
